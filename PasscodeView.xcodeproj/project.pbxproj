@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6FDF24598F8FECBAE25D8B1 /* Pods_PasscodeView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3193CDBFF9B9749C38A1DA3A /* Pods_PasscodeView.framework */; };
 		B427F05C2A9F00F100E91150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F05B2A9F00F100E91150 /* AppDelegate.swift */; };
 		B427F05E2A9F00F100E91150 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F05D2A9F00F100E91150 /* SceneDelegate.swift */; };
 		B427F0602A9F00F100E91150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F05F2A9F00F100E91150 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3193CDBFF9B9749C38A1DA3A /* Pods_PasscodeView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasscodeView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427F0582A9F00F100E91150 /* PasscodeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasscodeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427F05B2A9F00F100E91150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B427F05D2A9F00F100E91150 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		B427F0642A9F00F400E91150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B427F0672A9F00F400E91150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B427F0692A9F00F400E91150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC2FD08E8826FA179688C39 /* Pods-PasscodeView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.release.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.release.xcconfig"; sourceTree = "<group>"; };
+		DC1F2978C5383852E992CF39 /* Pods-PasscodeView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.debug.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6FDF24598F8FECBAE25D8B1 /* Pods_PasscodeView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FBD7AE8E07108004FAB1758 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC1F2978C5383852E992CF39 /* Pods-PasscodeView.debug.xcconfig */,
+				DBC2FD08E8826FA179688C39 /* Pods-PasscodeView.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B427F04F2A9F00F100E91150 = {
 			isa = PBXGroup;
 			children = (
 				B427F05A2A9F00F100E91150 /* PasscodeView */,
 				B427F0592A9F00F100E91150 /* Products */,
+				7FBD7AE8E07108004FAB1758 /* Pods */,
+				D11C671C5F18DF2D2DB09124 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = PasscodeView;
 			sourceTree = "<group>";
 		};
+		D11C671C5F18DF2D2DB09124 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3193CDBFF9B9749C38A1DA3A /* Pods_PasscodeView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B427F06C2A9F00F400E91150 /* Build configuration list for PBXNativeTarget "PasscodeView" */;
 			buildPhases = (
+				996411D8B846635235C705B9 /* [CP] Check Pods Manifest.lock */,
 				B427F0542A9F00F100E91150 /* Sources */,
 				B427F0552A9F00F100E91150 /* Frameworks */,
 				B427F0562A9F00F100E91150 /* Resources */,
+				4E784225DE9EBBA4A88A8668 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E784225DE9EBBA4A88A8668 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PasscodeView/Pods-PasscodeView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PasscodeView/Pods-PasscodeView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PasscodeView/Pods-PasscodeView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		996411D8B846635235C705B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PasscodeView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B427F0542A9F00F100E91150 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		B427F06D2A9F00F400E91150 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC1F2978C5383852E992CF39 /* Pods-PasscodeView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		B427F06E2A9F00F400E91150 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBC2FD08E8826FA179688C39 /* Pods-PasscodeView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
