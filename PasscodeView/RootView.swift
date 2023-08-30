@@ -43,6 +43,16 @@ class RootView: UIView {
     let numericCentralStackView: UIStackView = .createNumericStackView()
     let numericLeftStackView: UIStackView = .createNumericStackView()
     let numericRightStackView: UIStackView = .createNumericStackView()
+  
+    let deleteButton: UIButton = {
+        let btn = UIButton()
+        btn.setImage(UIImage(systemName: "delete.left.fill"), for: .normal)
+        btn.tintColor = .white
+        btn.contentHorizontalAlignment = .fill
+        btn.contentVerticalAlignment = .fill
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
+    }()
     
     //MARK: - Inits
     init() {
@@ -99,6 +109,7 @@ class RootView: UIView {
         addSubview(numericCentralStackView)
         addSubview(numericLeftStackView)
         addSubview(numericRightStackView)
+        addSubview(deleteButton)
       
         enterPasswordLabel.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(30)
@@ -130,6 +141,12 @@ class RootView: UIView {
             make.width.equalTo(LayoutConstants.numericButtonSize)
             make.height.equalTo(210)
             make.top.equalTo(stackView.snp.bottom).offset(250)
+            make.centerX.equalTo(numericCentralStackView.snp.trailing).offset(LayoutConstants.numericButtonSize)
+        }
+      
+        deleteButton.snp.makeConstraints { make in
+            make.height.width.equalTo(LayoutConstants.numericButtonSize)
+            make.top.equalTo(numericRightStackView.snp.bottom).offset(20)
             make.centerX.equalTo(numericCentralStackView.snp.trailing).offset(LayoutConstants.numericButtonSize)
         }
     }
