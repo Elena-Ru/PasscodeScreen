@@ -14,10 +14,12 @@
 		B427F0652A9F00F400E91150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B427F0642A9F00F400E91150 /* Assets.xcassets */; };
 		B427F0682A9F00F400E91150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B427F0662A9F00F400E91150 /* LaunchScreen.storyboard */; };
 		B427F0702A9F095F00E91150 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F06F2A9F095F00E91150 /* RootView.swift */; };
-		B427F0722A9F13F600E91150 /* RoundViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0712A9F13F600E91150 /* RoundViewExtention.swift */; };
+		B427F0722A9F13F600E91150 /* UIView+RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0712A9F13F600E91150 /* UIView+RoundView.swift */; };
 		B427F0742A9F1D2E00E91150 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0732A9F1D2E00E91150 /* UIColor+AppColors.swift */; };
 		B427F0762A9F391900E91150 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0752A9F391900E91150 /* RoundedButton.swift */; };
 		B427F0782A9F474E00E91150 /* UIStackView+Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0772A9F474E00E91150 /* UIStackView+Numeric.swift */; };
+		B427F07A2A9F621100E91150 /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0792A9F621100E91150 /* Passcode.swift */; };
+		B427F0812A9F62CE00E91150 /* PasscodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0802A9F62CE00E91150 /* PasscodeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +32,12 @@
 		B427F0672A9F00F400E91150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B427F0692A9F00F400E91150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B427F06F2A9F095F00E91150 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		B427F0712A9F13F600E91150 /* RoundViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewExtention.swift; sourceTree = "<group>"; };
+		B427F0712A9F13F600E91150 /* UIView+RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundView.swift"; sourceTree = "<group>"; };
 		B427F0732A9F1D2E00E91150 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
 		B427F0752A9F391900E91150 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		B427F0772A9F474E00E91150 /* UIStackView+Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Numeric.swift"; sourceTree = "<group>"; };
+		B427F0792A9F621100E91150 /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
+		B427F0802A9F62CE00E91150 /* PasscodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModel.swift; sourceTree = "<group>"; };
 		DBC2FD08E8826FA179688C39 /* Pods-PasscodeView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.release.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.release.xcconfig"; sourceTree = "<group>"; };
 		DC1F2978C5383852E992CF39 /* Pods-PasscodeView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.debug.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,17 +86,59 @@
 			children = (
 				B427F05B2A9F00F100E91150 /* AppDelegate.swift */,
 				B427F05D2A9F00F100E91150 /* SceneDelegate.swift */,
-				B427F05F2A9F00F100E91150 /* ViewController.swift */,
-				B427F06F2A9F095F00E91150 /* RootView.swift */,
-				B427F0752A9F391900E91150 /* RoundedButton.swift */,
-				B427F0712A9F13F600E91150 /* RoundViewExtention.swift */,
-				B427F0772A9F474E00E91150 /* UIStackView+Numeric.swift */,
-				B427F0732A9F1D2E00E91150 /* UIColor+AppColors.swift */,
+				B427F07B2A9F622300E91150 /* Model */,
+				B427F07C2A9F623B00E91150 /* View */,
+				B427F07F2A9F62A700E91150 /* ViewModel */,
+				B427F07E2A9F628200E91150 /* Helpers */,
+				B427F07D2A9F627000E91150 /* Extensions */,
 				B427F0642A9F00F400E91150 /* Assets.xcassets */,
 				B427F0662A9F00F400E91150 /* LaunchScreen.storyboard */,
 				B427F0692A9F00F400E91150 /* Info.plist */,
 			);
 			path = PasscodeView;
+			sourceTree = "<group>";
+		};
+		B427F07B2A9F622300E91150 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B427F0792A9F621100E91150 /* Passcode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B427F07C2A9F623B00E91150 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B427F05F2A9F00F100E91150 /* ViewController.swift */,
+				B427F06F2A9F095F00E91150 /* RootView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B427F07D2A9F627000E91150 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B427F0712A9F13F600E91150 /* UIView+RoundView.swift */,
+				B427F0772A9F474E00E91150 /* UIStackView+Numeric.swift */,
+				B427F0732A9F1D2E00E91150 /* UIColor+AppColors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B427F07E2A9F628200E91150 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B427F0752A9F391900E91150 /* RoundedButton.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B427F07F2A9F62A700E91150 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B427F0802A9F62CE00E91150 /* PasscodeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D11C671C5F18DF2D2DB09124 /* Frameworks */ = {
@@ -217,13 +263,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B427F0812A9F62CE00E91150 /* PasscodeViewModel.swift in Sources */,
 				B427F0702A9F095F00E91150 /* RootView.swift in Sources */,
 				B427F0782A9F474E00E91150 /* UIStackView+Numeric.swift in Sources */,
 				B427F0602A9F00F100E91150 /* ViewController.swift in Sources */,
+				B427F07A2A9F621100E91150 /* Passcode.swift in Sources */,
 				B427F05C2A9F00F100E91150 /* AppDelegate.swift in Sources */,
 				B427F05E2A9F00F100E91150 /* SceneDelegate.swift in Sources */,
 				B427F0762A9F391900E91150 /* RoundedButton.swift in Sources */,
-				B427F0722A9F13F600E91150 /* RoundViewExtention.swift in Sources */,
+				B427F0722A9F13F600E91150 /* UIView+RoundView.swift in Sources */,
 				B427F0742A9F1D2E00E91150 /* UIColor+AppColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

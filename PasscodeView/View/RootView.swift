@@ -7,8 +7,12 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 class RootView: UIView {
+  
+    let numericButtonPublisher = PassthroughSubject<String, Never>()
+    let deleteButtonPublisher = PassthroughSubject<Void, Never>()
   
     struct LayoutConstants {
         static let circleSize: CGFloat = 20
@@ -51,6 +55,7 @@ class RootView: UIView {
         btn.contentHorizontalAlignment = .fill
         btn.contentVerticalAlignment = .fill
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(deleteButtonAction(_:)), for: .touchUpInside)
         return btn
     }()
     
@@ -82,14 +87,14 @@ class RootView: UIView {
     private func createCircle() -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .brightCoral
+        view.backgroundColor = .clear
         return view
     }
   
     private func createNumericButtons() {
-      createButtons(for: numericCentralStackView, titles: centralNumericTitles)
-      createButtons(for: numericLeftStackView, titles: leftNumericTitles)
-      createButtons(for: numericRightStackView, titles: rightNumericTitles)
+        createButtons(for: numericCentralStackView, titles: centralNumericTitles)
+        createButtons(for: numericLeftStackView, titles: leftNumericTitles)
+        createButtons(for: numericRightStackView, titles: rightNumericTitles)
     }
   
     private func createButtons(for stackView: UIStackView, titles: [String]) {
@@ -97,6 +102,7 @@ class RootView: UIView {
              let button = RoundedButton(title: title)
              numericButtons.append(button)
              stackView.addArrangedSubview(button)
+             button.addTarget(self, action: #selector(numericButtonTapped(_:)), for: .touchUpInside)
              button.snp.makeConstraints { make in
                  make.width.height.equalTo(LayoutConstants.numericButtonSize)
              }
@@ -149,5 +155,14 @@ class RootView: UIView {
             make.top.equalTo(numericRightStackView.snp.bottom).offset(20)
             make.centerX.equalTo(numericCentralStackView.snp.trailing).offset(LayoutConstants.numericButtonSize)
         }
+    }
+  
+    @objc private func numericButtonTapped(_ sender: UIButton) {
+         guard let buttonTitle = sender.titleLabel?.text else { return }
+         numericButtonPublisher.send(buttonTitle)
+    }
+
+    @objc private func deleteButtonAction(_ sender: UIButton) {
+         deleteButtonPublisher.send(())
     }
 }
