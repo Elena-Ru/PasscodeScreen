@@ -13,6 +13,11 @@
 		B427F0602A9F00F100E91150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F05F2A9F00F100E91150 /* ViewController.swift */; };
 		B427F0652A9F00F400E91150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B427F0642A9F00F400E91150 /* Assets.xcassets */; };
 		B427F0682A9F00F400E91150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B427F0662A9F00F400E91150 /* LaunchScreen.storyboard */; };
+		B427F0702A9F095F00E91150 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F06F2A9F095F00E91150 /* RootView.swift */; };
+		B427F0722A9F13F600E91150 /* RoundViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0712A9F13F600E91150 /* RoundViewExtention.swift */; };
+		B427F0742A9F1D2E00E91150 /* UIColor+AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0732A9F1D2E00E91150 /* UIColor+AppColors.swift */; };
+		B427F0762A9F391900E91150 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0752A9F391900E91150 /* RoundedButton.swift */; };
+		B427F0782A9F474E00E91150 /* UIStackView+Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0772A9F474E00E91150 /* UIStackView+Numeric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		B427F0642A9F00F400E91150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B427F0672A9F00F400E91150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B427F0692A9F00F400E91150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B427F06F2A9F095F00E91150 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B427F0712A9F13F600E91150 /* RoundViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViewExtention.swift; sourceTree = "<group>"; };
+		B427F0732A9F1D2E00E91150 /* UIColor+AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColors.swift"; sourceTree = "<group>"; };
+		B427F0752A9F391900E91150 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		B427F0772A9F474E00E91150 /* UIStackView+Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Numeric.swift"; sourceTree = "<group>"; };
 		DBC2FD08E8826FA179688C39 /* Pods-PasscodeView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.release.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.release.xcconfig"; sourceTree = "<group>"; };
 		DC1F2978C5383852E992CF39 /* Pods-PasscodeView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.debug.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +83,11 @@
 				B427F05B2A9F00F100E91150 /* AppDelegate.swift */,
 				B427F05D2A9F00F100E91150 /* SceneDelegate.swift */,
 				B427F05F2A9F00F100E91150 /* ViewController.swift */,
+				B427F06F2A9F095F00E91150 /* RootView.swift */,
+				B427F0752A9F391900E91150 /* RoundedButton.swift */,
+				B427F0712A9F13F600E91150 /* RoundViewExtention.swift */,
+				B427F0772A9F474E00E91150 /* UIStackView+Numeric.swift */,
+				B427F0732A9F1D2E00E91150 /* UIColor+AppColors.swift */,
 				B427F0642A9F00F400E91150 /* Assets.xcassets */,
 				B427F0662A9F00F400E91150 /* LaunchScreen.storyboard */,
 				B427F0692A9F00F400E91150 /* Info.plist */,
@@ -202,9 +217,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B427F0702A9F095F00E91150 /* RootView.swift in Sources */,
+				B427F0782A9F474E00E91150 /* UIStackView+Numeric.swift in Sources */,
 				B427F0602A9F00F100E91150 /* ViewController.swift in Sources */,
 				B427F05C2A9F00F100E91150 /* AppDelegate.swift in Sources */,
 				B427F05E2A9F00F100E91150 /* SceneDelegate.swift in Sources */,
+				B427F0762A9F391900E91150 /* RoundedButton.swift in Sources */,
+				B427F0722A9F13F600E91150 /* RoundViewExtention.swift in Sources */,
+				B427F0742A9F1D2E00E91150 /* UIColor+AppColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,8 +368,8 @@
 				INFOPLIST_FILE = PasscodeView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,8 +395,8 @@
 				INFOPLIST_FILE = PasscodeView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
