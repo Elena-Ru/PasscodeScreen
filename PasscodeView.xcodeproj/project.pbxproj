@@ -21,6 +21,7 @@
 		B427F07A2A9F621100E91150 /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0792A9F621100E91150 /* Passcode.swift */; };
 		B427F0812A9F62CE00E91150 /* PasscodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0802A9F62CE00E91150 /* PasscodeViewModel.swift */; };
 		B427F0842A9F666A00E91150 /* PasscodeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0832A9F666A00E91150 /* PasscodeAssembler.swift */; };
+		B427F0882A9F895300E91150 /* PasscodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0872A9F895300E91150 /* PasscodeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B427F0792A9F621100E91150 /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
 		B427F0802A9F62CE00E91150 /* PasscodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModel.swift; sourceTree = "<group>"; };
 		B427F0832A9F666A00E91150 /* PasscodeAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeAssembler.swift; sourceTree = "<group>"; };
+		B427F0872A9F895300E91150 /* PasscodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeManager.swift; sourceTree = "<group>"; };
 		DBC2FD08E8826FA179688C39 /* Pods-PasscodeView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.release.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.release.xcconfig"; sourceTree = "<group>"; };
 		DC1F2978C5383852E992CF39 /* Pods-PasscodeView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.debug.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,10 +90,8 @@
 			children = (
 				B427F05B2A9F00F100E91150 /* AppDelegate.swift */,
 				B427F05D2A9F00F100E91150 /* SceneDelegate.swift */,
-				B427F0822A9F664D00E91150 /* Assembler */,
-				B427F07B2A9F622300E91150 /* Model */,
-				B427F07C2A9F623B00E91150 /* View */,
-				B427F07F2A9F62A700E91150 /* ViewModel */,
+				B427F0862A9F893200E91150 /* Managers */,
+				B427F0852A9F873D00E91150 /* Passcode */,
 				B427F07E2A9F628200E91150 /* Helpers */,
 				B427F07D2A9F627000E91150 /* Extensions */,
 				B427F0642A9F00F400E91150 /* Assets.xcassets */,
@@ -150,6 +150,25 @@
 				B427F0832A9F666A00E91150 /* PasscodeAssembler.swift */,
 			);
 			path = Assembler;
+			sourceTree = "<group>";
+		};
+		B427F0852A9F873D00E91150 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				B427F0822A9F664D00E91150 /* Assembler */,
+				B427F07B2A9F622300E91150 /* Model */,
+				B427F07C2A9F623B00E91150 /* View */,
+				B427F07F2A9F62A700E91150 /* ViewModel */,
+			);
+			path = Passcode;
+			sourceTree = "<group>";
+		};
+		B427F0862A9F893200E91150 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B427F0872A9F895300E91150 /* PasscodeManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		D11C671C5F18DF2D2DB09124 /* Frameworks */ = {
@@ -275,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B427F0812A9F62CE00E91150 /* PasscodeViewModel.swift in Sources */,
+				B427F0882A9F895300E91150 /* PasscodeManager.swift in Sources */,
 				B427F0702A9F095F00E91150 /* RootView.swift in Sources */,
 				B427F0782A9F474E00E91150 /* UIStackView+Numeric.swift in Sources */,
 				B427F0602A9F00F100E91150 /* ViewController.swift in Sources */,
