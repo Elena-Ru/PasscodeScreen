@@ -20,6 +20,7 @@
 		B427F0782A9F474E00E91150 /* UIStackView+Numeric.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0772A9F474E00E91150 /* UIStackView+Numeric.swift */; };
 		B427F07A2A9F621100E91150 /* Passcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0792A9F621100E91150 /* Passcode.swift */; };
 		B427F0812A9F62CE00E91150 /* PasscodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0802A9F62CE00E91150 /* PasscodeViewModel.swift */; };
+		B427F0842A9F666A00E91150 /* PasscodeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0832A9F666A00E91150 /* PasscodeAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B427F0772A9F474E00E91150 /* UIStackView+Numeric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Numeric.swift"; sourceTree = "<group>"; };
 		B427F0792A9F621100E91150 /* Passcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passcode.swift; sourceTree = "<group>"; };
 		B427F0802A9F62CE00E91150 /* PasscodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModel.swift; sourceTree = "<group>"; };
+		B427F0832A9F666A00E91150 /* PasscodeAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeAssembler.swift; sourceTree = "<group>"; };
 		DBC2FD08E8826FA179688C39 /* Pods-PasscodeView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.release.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.release.xcconfig"; sourceTree = "<group>"; };
 		DC1F2978C5383852E992CF39 /* Pods-PasscodeView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.debug.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			children = (
 				B427F05B2A9F00F100E91150 /* AppDelegate.swift */,
 				B427F05D2A9F00F100E91150 /* SceneDelegate.swift */,
+				B427F0822A9F664D00E91150 /* Assembler */,
 				B427F07B2A9F622300E91150 /* Model */,
 				B427F07C2A9F623B00E91150 /* View */,
 				B427F07F2A9F62A700E91150 /* ViewModel */,
@@ -139,6 +142,14 @@
 				B427F0802A9F62CE00E91150 /* PasscodeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B427F0822A9F664D00E91150 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				B427F0832A9F666A00E91150 /* PasscodeAssembler.swift */,
+			);
+			path = Assembler;
 			sourceTree = "<group>";
 		};
 		D11C671C5F18DF2D2DB09124 /* Frameworks */ = {
@@ -272,6 +283,7 @@
 				B427F05E2A9F00F100E91150 /* SceneDelegate.swift in Sources */,
 				B427F0762A9F391900E91150 /* RoundedButton.swift in Sources */,
 				B427F0722A9F13F600E91150 /* UIView+RoundView.swift in Sources */,
+				B427F0842A9F666A00E91150 /* PasscodeAssembler.swift in Sources */,
 				B427F0742A9F1D2E00E91150 /* UIColor+AppColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
