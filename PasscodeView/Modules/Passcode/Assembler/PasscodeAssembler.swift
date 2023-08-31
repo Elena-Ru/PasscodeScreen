@@ -6,17 +6,21 @@
 //
 
 import Foundation
+import UIKit
 
 protocol PasscodeAssembler {
-    func resolveViewController() -> ViewController
+    func resolveNavigationController() -> UINavigationController
     func resolveViewModel() -> PasscodeViewModel
 }
 
 class PasscodeAssemblerImpl: PasscodeAssembler {
-    func resolveViewController() -> ViewController {
+    func resolveNavigationController() -> UINavigationController {
         let viewController = ViewController()
         viewController.viewModel = resolveViewModel()
-        return viewController
+        let navigationController = UINavigationController(rootViewController: viewController)
+        let router = PasscodeRouter(navigationController: navigationController)
+        viewController.router = router
+        return navigationController
     }
     
     func resolveViewModel() -> PasscodeViewModel {

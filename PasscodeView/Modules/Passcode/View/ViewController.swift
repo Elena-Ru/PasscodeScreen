@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var rootView = RootView()
     var viewModel = PasscodeViewModel()
     private var cancellables = Set<AnyCancellable>()
+    var router: PasscodeRouting!
 
     override func loadView() {
         super.loadView()
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
         viewModel.passcodeCheckResult
             .sink { [weak self] isValid in
                 if isValid {
-                    print("переход")
+                    self?.router.navigateToNextScreen()
                 } else {
                     print("сброс")
                 }
