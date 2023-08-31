@@ -11,5 +11,9 @@ final class PasscodeManager {
     static let shared = PasscodeManager()
     private init() {}
     
-    var passcode: String = "1234"
+    var storedPasscode: String = "1234"
+  
+    func validate(passcode: String) -> Bool {
+      return passcode == storedPasscode
+    }
 }
