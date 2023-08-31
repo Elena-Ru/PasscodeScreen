@@ -15,7 +15,7 @@ protocol PasscodeAssembler {
 
 class PasscodeAssemblerImpl: PasscodeAssembler {
     func assemblePasscodeStack() -> UINavigationController {
-        let viewController = ViewController()
+        let viewController = PasscodeViewController()
         viewController.viewModel = resolveViewModel()
         let navigationController = UINavigationController(rootViewController: viewController)
         let router = PasscodeRouter(navigationController: navigationController)

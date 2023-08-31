@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PasscodeViewController.swift
 //  PasscodeView
 //
 //  Created by Елена Русских on 2023-08-30.
@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class ViewController: UIViewController {
+class PasscodeViewController: UIViewController {
 
     var rootView = RootView()
     var viewModel = PasscodeViewModel()
@@ -67,10 +67,10 @@ class ViewController: UIViewController {
     }
   
     private func showInvalidPasscodeAlert() {
-        let alertController = UIAlertController(title: "Ошибка",
-                                                message: "Введен неверный пароль",
+        let alertController = UIAlertController(title: Texts.Alert.title,
+                                                message: Texts.Alert.message,
                                                 preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "ОК", style: .default)
+        let okAction = UIAlertAction(title: Texts.Alert.ok_button, style: .default)
         alertController.addAction(okAction)
         present(alertController, animated: true)
     }

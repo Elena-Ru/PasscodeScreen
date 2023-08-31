@@ -29,7 +29,7 @@ class RootView: UIView {
     let enterPasswordLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Enter Password"
+        label.text = Texts.ViewController.title
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         return label
