@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 protocol PasscodeAssembler {
-    func resolveNavigationController() -> UINavigationController
+    func assemblePasscodeStack() -> UINavigationController
     func resolveViewModel() -> PasscodeViewModel
 }
 
 class PasscodeAssemblerImpl: PasscodeAssembler {
-    func resolveNavigationController() -> UINavigationController {
+    func assemblePasscodeStack() -> UINavigationController {
         let viewController = ViewController()
         viewController.viewModel = resolveViewModel()
         let navigationController = UINavigationController(rootViewController: viewController)

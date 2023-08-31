@@ -196,9 +196,25 @@
 		B427F08D2AA050EE00E91150 /* SecondScreen */ = {
 			isa = PBXGroup;
 			children = (
-				B427F08E2AA0511100E91150 /* SecondViewController.swift */,
+				B427F0912AA054C400E91150 /* ViewModel */,
+				B427F0902AA054B800E91150 /* View */,
 			);
 			path = SecondScreen;
+			sourceTree = "<group>";
+		};
+		B427F0902AA054B800E91150 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B427F08E2AA0511100E91150 /* SecondViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B427F0912AA054C400E91150 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D11C671C5F18DF2D2DB09124 /* Frameworks */ = {
