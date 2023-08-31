@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                 if isValid {
                     self?.router.navigateToNextScreen()
                 } else {
-                    print("сброс")
+                    self?.showInvalidPasscodeAlert()
                 }
             }
             .store(in: &cancellables)
@@ -52,13 +52,6 @@ class ViewController: UIViewController {
         rootView.deleteButtonPublisher
             .sink { [weak self] in
                 self?.viewModel.deleteLastDigit()
-            }
-            .store(in: &cancellables)
-      
-        viewModel.invalidPasscodeAlertPublisher
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] in
-                self?.showInvalidPasscodeAlert()
             }
             .store(in: &cancellables)
     }

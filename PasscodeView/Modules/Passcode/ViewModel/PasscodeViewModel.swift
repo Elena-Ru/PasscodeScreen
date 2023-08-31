@@ -12,7 +12,6 @@ class PasscodeViewModel: ObservableObject {
 
     @Published private(set) var passcode = Passcode()
     var passcodeCheckResult = PassthroughSubject<Bool, Never>()
-    var invalidPasscodeAlertPublisher = PassthroughSubject<Void, Never>()
     private let checkPasscodePublisher = PassthroughSubject<Void, Never>()
     private var cancellables = Set<AnyCancellable>()
 
@@ -43,12 +42,8 @@ class PasscodeViewModel: ObservableObject {
       let enteredPasscode = passcode.digits.joined()
       let isValid = PasscodeManager.shared.validate(passcode: enteredPasscode)
       DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-        if isValid {
-          self?.passcodeCheckResult.send(isValid)
-        } else {
-          self?.invalidPasscodeAlertPublisher.send(())
-          self?.passcode.digits = []
-        }
+        self?.passcodeCheckResult.send(isValid)
+        self?.passcode.digits = []
       }
     }
 
