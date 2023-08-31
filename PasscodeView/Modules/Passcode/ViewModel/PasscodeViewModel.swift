@@ -14,10 +14,12 @@ class PasscodeViewModel: ObservableObject {
     var passcodeCheckResult = PassthroughSubject<Bool, Never>()
     private let checkPasscodePublisher = PassthroughSubject<Void, Never>()
     private var cancellables = Set<AnyCancellable>()
+    private let passcodeManager: PasscodeManagerProtocol
 
-    init() {
-        setupBindings()
-    }
+    init(passcodeManager: PasscodeManagerProtocol = PasscodeManager.shared) {
+           self.passcodeManager = passcodeManager
+           setupBindings()
+       }
 
     private func setupBindings() {
         checkPasscodePublisher
@@ -40,7 +42,7 @@ class PasscodeViewModel: ObservableObject {
 
     private func checkPasscode() {
       let enteredPasscode = passcode.digits.joined()
-      let isValid = PasscodeManager.shared.validate(passcode: enteredPasscode)
+      let isValid = passcodeManager.validate(passcode: enteredPasscode)
       DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
         self?.passcodeCheckResult.send(isValid)
         self?.passcode.digits = []

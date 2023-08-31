@@ -11,14 +11,13 @@ import Combine
 
 class RootView: UIView {
   
-    let numericButtonPublisher = PassthroughSubject<String, Never>()
-    let deleteButtonPublisher = PassthroughSubject<Void, Never>()
-  
     struct LayoutConstants {
         static let circleSize: CGFloat = 20
         static let numericButtonSize: CGFloat = 60
     }
   
+    let numericButtonPublisher = PassthroughSubject<String, Never>()
+    let deleteButtonPublisher = PassthroughSubject<Void, Never>()
     let centralNumericTitles = ["2", "5", "8", "0"]
     let leftNumericTitles = ["1", "4", "7"]
     let rightNumericTitles = ["3", "6", "9"]
@@ -157,6 +156,7 @@ class RootView: UIView {
         }
     }
   
+    //MARK: - Objc methods
     @objc private func numericButtonTapped(_ sender: UIButton) {
          guard let buttonTitle = sender.titleLabel?.text else { return }
          numericButtonPublisher.send(buttonTitle)

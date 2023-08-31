@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class PasscodeManager {
+protocol PasscodeManagerProtocol {
+    func validate(passcode: String) -> Bool
+}
+
+final class PasscodeManager: PasscodeManagerProtocol {
     static let shared = PasscodeManager()
     private init() {}
     
