@@ -54,6 +54,13 @@ class ViewController: UIViewController {
                 self?.viewModel.deleteLastDigit()
             }
             .store(in: &cancellables)
+      
+        viewModel.invalidPasscodeAlertPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                self?.showInvalidPasscodeAlert()
+            }
+            .store(in: &cancellables)
     }
 
     private func updateUIForPasscode(_ passcode: Passcode) {
@@ -64,5 +71,14 @@ class ViewController: UIViewController {
                 circle.backgroundColor = .clear
             }
         }
+    }
+  
+    private func showInvalidPasscodeAlert() {
+        let alertController = UIAlertController(title: "Ошибка",
+                                                message: "Введен неверный пароль",
+                                                preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ОК", style: .default)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
     }
 }
