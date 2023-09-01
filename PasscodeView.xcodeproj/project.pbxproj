@@ -11,6 +11,7 @@
 		B407EDCB2AA1D7ED00EC68F0 /* PasscodeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407EDCA2AA1D7ED00EC68F0 /* PasscodeRouterTests.swift */; };
 		B407EDCD2AA1D88200EC68F0 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407EDCC2AA1D88200EC68F0 /* MockNavigationController.swift */; };
 		B407EDD12AA1DBDF00EC68F0 /* PasscodeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407EDD02AA1DBDF00EC68F0 /* PasscodeManagerTests.swift */; };
+		B407EDD32AA1DD2E00EC68F0 /* SecondViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B407EDD22AA1DD2E00EC68F0 /* SecondViewControllerTests.swift */; };
 		B427F05C2A9F00F100E91150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F05B2A9F00F100E91150 /* AppDelegate.swift */; };
 		B427F05E2A9F00F100E91150 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F05D2A9F00F100E91150 /* SceneDelegate.swift */; };
 		B427F0602A9F00F100E91150 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F05F2A9F00F100E91150 /* PasscodeViewController.swift */; };
@@ -48,6 +49,7 @@
 		B407EDCA2AA1D7ED00EC68F0 /* PasscodeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeRouterTests.swift; sourceTree = "<group>"; };
 		B407EDCC2AA1D88200EC68F0 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		B407EDD02AA1DBDF00EC68F0 /* PasscodeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeManagerTests.swift; sourceTree = "<group>"; };
+		B407EDD22AA1DD2E00EC68F0 /* SecondViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewControllerTests.swift; sourceTree = "<group>"; };
 		B427F0582A9F00F100E91150 /* PasscodeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasscodeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427F05B2A9F00F100E91150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B427F05D2A9F00F100E91150 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				B427F09E2AA0683800E91150 /* PasscodeViewModelTests.swift */,
 				B407EDCA2AA1D7ED00EC68F0 /* PasscodeRouterTests.swift */,
 				B407EDD02AA1DBDF00EC68F0 /* PasscodeManagerTests.swift */,
+				B407EDD22AA1DD2E00EC68F0 /* SecondViewControllerTests.swift */,
 				B427F0A72AA06B3300E91150 /* Mocks */,
 			);
 			path = PasscodeViewTests;
@@ -458,6 +461,7 @@
 			files = (
 				B407EDCB2AA1D7ED00EC68F0 /* PasscodeRouterTests.swift in Sources */,
 				B427F09F2AA0683800E91150 /* PasscodeViewModelTests.swift in Sources */,
+				B407EDD32AA1DD2E00EC68F0 /* SecondViewControllerTests.swift in Sources */,
 				B427F0A62AA06B2E00E91150 /* MockPasscodeManager.swift in Sources */,
 				B407EDD12AA1DBDF00EC68F0 /* PasscodeManagerTests.swift in Sources */,
 				B407EDCD2AA1D88200EC68F0 /* MockNavigationController.swift in Sources */,
