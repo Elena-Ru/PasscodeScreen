@@ -10,7 +10,8 @@ Passcode screen has:
 4. Fill the next circle upon entering a new digit and unfill it when the backspace button is pressed;
 5. Upon entering four digits, compare them with a 4-digit number saved somewhere in a singleton. If they match, navigate to the next screen; if not, reset the filled circles and display an error message.
 6.  MVVM architecture.
-7.  Localization.
-8.  UI develop with Snapkit.
-9.  Unit tests.
-10. UI tests.   
+7.  Combine.
+8.  Localization.
+9.  UI develop with Snapkit.
+10.  Unit tests.
+11. UI tests.   
