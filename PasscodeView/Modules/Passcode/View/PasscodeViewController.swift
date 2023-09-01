@@ -60,8 +60,10 @@ class PasscodeViewController: UIViewController {
         for (index, circle) in rootView.circles.enumerated() {
             if index < passcode.digits.count {
                 circle.backgroundColor = .brightCoral
+                circle.accessibilityValue = "filled"
             } else {
                 circle.backgroundColor = .clear
+                circle.accessibilityValue = "empty"
             }
         }
     }

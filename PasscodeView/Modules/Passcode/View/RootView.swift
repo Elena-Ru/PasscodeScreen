@@ -54,7 +54,9 @@ class RootView: UIView {
         btn.contentHorizontalAlignment = .fill
         btn.contentVerticalAlignment = .fill
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.accessibilityIdentifier = "backspace"
         btn.addTarget(self, action: #selector(deleteButtonAction(_:)), for: .touchUpInside)
+        
         return btn
     }()
     
@@ -72,8 +74,9 @@ class RootView: UIView {
     
     //MARK: - Private methods
     private func createCircles(count: Int) {
-        for _ in 0..<count {
+        for i in 0..<count {
             let circle = createCircle()
+          circle.accessibilityIdentifier = "circle\(i)"
             circles.append(circle)
             stackView.addArrangedSubview(circle)
             circle.snp.makeConstraints { make in

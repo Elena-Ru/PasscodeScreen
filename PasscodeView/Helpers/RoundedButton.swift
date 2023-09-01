@@ -22,6 +22,7 @@ class RoundedButton: UIButton {
         layer.borderColor = UIColor.lightGrayBorder.cgColor
         layer.borderWidth = 2.0
         translatesAutoresizingMaskIntoConstraints = false
+        accessibilityIdentifier = title
     }
     
     required init?(coder: NSCoder) {
