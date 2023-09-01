@@ -44,6 +44,17 @@
                referenceType = "1">
             </LocationScenarioReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B407EDD92AA1E1E400EC68F0"
+               BuildableName = "PasscodeViewUITests.xctest"
+               BlueprintName = "PasscodeViewUITests"
+               ReferencedContainer = "container:PasscodeView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
