@@ -18,6 +18,7 @@ class PasscodeViewModel: ObservableObject {
 
     init(passcodeManager: PasscodeManagerProtocol = PasscodeManager.shared) {
            self.passcodeManager = passcodeManager
+           self.passcodeManager.save(passcode: "1111")
            setupBindings()
        }
 
