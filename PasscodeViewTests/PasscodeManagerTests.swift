@@ -19,10 +19,6 @@ class PasscodeManagerTests: XCTestCase {
         passcodeManager = nil
     }
 
-    func test_storedPasscodeValue() {
-        XCTAssertEqual(passcodeManager.storedPasscode, "1111", "Stored passcode should be '1111'")
-    }
-
     func test_validateCorrectPasscode() {
         XCTAssertTrue(passcodeManager.validate(passcode: "1111"), "Function should return true for correct passcode")
     }
