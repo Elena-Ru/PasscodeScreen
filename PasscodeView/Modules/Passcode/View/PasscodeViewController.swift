@@ -11,7 +11,7 @@ import Combine
 class PasscodeViewController: UIViewController {
 
     var rootView = RootView()
-    var viewModel = PasscodeViewModel()
+    var viewModel: PasscodeViewModel?
     private var cancellables = Set<AnyCancellable>()
     var router: PasscodeRouting!
 
@@ -27,13 +27,13 @@ class PasscodeViewController: UIViewController {
     }
 
     private func bindViewModel() {
-        viewModel.$passcode
+        viewModel?.$passcode
             .sink { [weak self] passcode in
                 self?.updateUIForPasscode(passcode)
             }
             .store(in: &cancellables)
 
-        viewModel.passcodeCheckResult
+        viewModel?.passcodeCheckResult
             .sink { [weak self] isValid in
                 if isValid {
                     self?.router.navigateToNextScreen()
@@ -45,13 +45,13 @@ class PasscodeViewController: UIViewController {
 
         rootView.numericButtonPublisher
             .sink { [weak self] number in
-                self?.viewModel.appendDigit(number)
+                self?.viewModel?.appendDigit(number)
             }
             .store(in: &cancellables)
 
         rootView.deleteButtonPublisher
             .sink { [weak self] in
-                self?.viewModel.deleteLastDigit()
+                self?.viewModel?.deleteLastDigit()
             }
             .store(in: &cancellables)
     }
