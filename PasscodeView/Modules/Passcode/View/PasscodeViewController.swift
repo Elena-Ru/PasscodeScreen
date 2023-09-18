@@ -11,7 +11,6 @@ import Combine
 class PasscodeViewController: UIViewController {
 
     var rootView = RootView()
-    let dependencyContainer = AppDependencyContainer()
     var viewModel: PasscodeViewModel?
     private var cancellables = Set<AnyCancellable>()
     var router: PasscodeRouting!
@@ -24,7 +23,6 @@ class PasscodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .darkIndigo
-        viewModel = dependencyContainer.container.resolve(PasscodeViewModel.self)
         bindViewModel()
     }
 

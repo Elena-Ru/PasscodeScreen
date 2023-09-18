@@ -16,15 +16,17 @@ class AppDependencyContainer {
     }
 
     private func registerDependencies() {
-        // Регистрация сервиса для управления паролем
         container.register(PasscodeManagerProtocol.self) { _ in
             PasscodeManager.shared
         }
 
-        // Регистрация ViewModel с инъекцией зависимости PasscodeManager
         container.register(PasscodeViewModel.self) { r in
             let passcodeManager = r.resolve(PasscodeManagerProtocol.self)!
             return PasscodeViewModel(passcodeManager: passcodeManager)
+        }
+      
+        container.register(PasscodeRouting.self) { (r, navigationController: UINavigationController) in
+            PasscodeRouter(navigationController: navigationController)
         }
     }
 }

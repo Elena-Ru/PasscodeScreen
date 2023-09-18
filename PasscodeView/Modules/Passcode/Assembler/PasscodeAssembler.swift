@@ -10,22 +10,17 @@ import UIKit
 
 protocol PasscodeAssembler {
     func assemblePasscodeStack() -> UINavigationController
-    func resolveViewModel() -> PasscodeViewModel
 }
 
 class PasscodeAssemblerImpl: PasscodeAssembler {
     func assemblePasscodeStack() -> UINavigationController {
+        let container = AppDependencyContainer().container
+        
         let viewController = PasscodeViewController()
-        viewController.viewModel = resolveViewModel()
+        viewController.viewModel = container.resolve(PasscodeViewModel.self)
         let navigationController = UINavigationController(rootViewController: viewController)
-        let router = PasscodeRouter(navigationController: navigationController)
-        viewController.router = router
+        viewController.router = container.resolve(PasscodeRouting.self, argument: navigationController)
         return navigationController
-    }
-    
-    func resolveViewModel() -> PasscodeViewModel {
-        let dependencyContainer = AppDependencyContainer()
-        return dependencyContainer.container.resolve(PasscodeViewModel.self)!
     }
 
 }
