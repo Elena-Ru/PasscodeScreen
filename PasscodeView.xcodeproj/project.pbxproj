@@ -35,6 +35,7 @@
 		B427F0972AA0651800E91150 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0962AA0651800E91150 /* Texts.swift */; };
 		B427F09F2AA0683800E91150 /* PasscodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F09E2AA0683800E91150 /* PasscodeViewModelTests.swift */; };
 		B427F0A62AA06B2E00E91150 /* MockPasscodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0A52AA06B2E00E91150 /* MockPasscodeManager.swift */; };
+		B4EF5CA82AB84C7200BEBBF2 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF5CA72AB84C7200BEBBF2 /* DependencyContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		B427F09C2AA0683800E91150 /* PasscodeViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasscodeViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427F09E2AA0683800E91150 /* PasscodeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModelTests.swift; sourceTree = "<group>"; };
 		B427F0A52AA06B2E00E91150 /* MockPasscodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasscodeManager.swift; sourceTree = "<group>"; };
+		B4EF5CA72AB84C7200BEBBF2 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		DBC2FD08E8826FA179688C39 /* Pods-PasscodeView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.release.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.release.xcconfig"; sourceTree = "<group>"; };
 		DC1F2978C5383852E992CF39 /* Pods-PasscodeView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.debug.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 			children = (
 				B427F05B2A9F00F100E91150 /* AppDelegate.swift */,
 				B427F05D2A9F00F100E91150 /* SceneDelegate.swift */,
+				B4EF5CA72AB84C7200BEBBF2 /* DependencyContainer.swift */,
 				B427F0922AA062E800E91150 /* Localization */,
 				B427F0862A9F893200E91150 /* Managers */,
 				B427F08C2AA050DC00E91150 /* Modules */,
@@ -515,6 +518,7 @@
 				B427F0972AA0651800E91150 /* Texts.swift in Sources */,
 				B427F0782A9F474E00E91150 /* UIStackView+Numeric.swift in Sources */,
 				B427F08F2AA0511100E91150 /* SecondViewController.swift in Sources */,
+				B4EF5CA82AB84C7200BEBBF2 /* DependencyContainer.swift in Sources */,
 				B427F0602A9F00F100E91150 /* PasscodeViewController.swift in Sources */,
 				B427F07A2A9F621100E91150 /* Passcode.swift in Sources */,
 				B427F08B2AA04FDA00E91150 /* PasscodeRouter.swift in Sources */,

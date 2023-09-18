@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import KeychainSwift
 
 protocol PasscodeManagerProtocol {
+    func save(passcode: String) -> Bool
     func validate(passcode: String) -> Bool
 }
 
@@ -15,9 +17,17 @@ final class PasscodeManager: PasscodeManagerProtocol {
     static let shared = PasscodeManager()
     private init() {}
     
-    var storedPasscode: String = "1111"
-  
+    private let keychain = KeychainSwift()
+    private let keychainKey = "storedPasscode"
+    
+    func save(passcode: String) -> Bool {
+        return keychain.set(passcode, forKey: keychainKey)
+    }
+    
     func validate(passcode: String) -> Bool {
-      return passcode == storedPasscode
+        guard let storedPasscode = keychain.get(keychainKey) else {
+            return false
+        }
+        return passcode == storedPasscode
     }
 }

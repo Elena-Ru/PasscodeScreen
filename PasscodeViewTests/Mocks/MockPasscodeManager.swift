@@ -7,9 +7,14 @@
 @testable import PasscodeView
 
 class MockPasscodeManager: PasscodeManagerProtocol {
-    var mockedResult: Bool = true
+  
+     var mockedResult: Bool = true
 
      func validate(passcode: String) -> Bool {
          return mockedResult
      }
+  
+    func save(passcode: String) -> Bool {
+      return true
+    }
 }
