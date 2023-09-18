@@ -11,7 +11,8 @@ Passcode screen has:
 5. Upon entering four digits, compare them with a 4-digit number saved somewhere in a singleton. If they match, navigate to the next screen; if not, reset the filled circles and display an error message.
 6.  MVVM architecture.
 7.  Combine.
-8.  Localization.
-9.  UI develop with Snapkit.
-10.  Unit tests.
-11. UI tests.   
+8.  Swinject.
+9.  Localization.
+10.  UI develop with Snapkit.
+11. Unit tests.
+12. UI tests.   
