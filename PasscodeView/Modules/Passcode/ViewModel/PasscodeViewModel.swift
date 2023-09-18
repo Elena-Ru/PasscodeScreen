@@ -16,11 +16,11 @@ class PasscodeViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     private let passcodeManager: PasscodeManagerProtocol
 
-    init(passcodeManager: PasscodeManagerProtocol = PasscodeManager.shared) {
-           self.passcodeManager = passcodeManager
-           self.passcodeManager.save(passcode: "1111")
-           setupBindings()
-       }
+    init(passcodeManager: PasscodeManagerProtocol) {
+        self.passcodeManager = passcodeManager
+        self.passcodeManager.save(passcode: "1111")
+        setupBindings()
+    }
 
     private func setupBindings() {
         checkPasscodePublisher
@@ -49,7 +49,6 @@ class PasscodeViewModel: ObservableObject {
         self?.passcode.digits = []
       }
     }
-
 
     func deleteLastDigit() {
         if passcode.digits.count > 0 {

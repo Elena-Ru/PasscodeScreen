@@ -24,6 +24,8 @@ class PasscodeAssemblerImpl: PasscodeAssembler {
     }
     
     func resolveViewModel() -> PasscodeViewModel {
-        return PasscodeViewModel()
+        let dependencyContainer = AppDependencyContainer()
+        return dependencyContainer.container.resolve(PasscodeViewModel.self)!
     }
+
 }
