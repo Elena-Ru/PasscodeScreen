@@ -69,10 +69,10 @@ class PasscodeViewController: UIViewController {
     }
   
     private func showInvalidPasscodeAlert() {
-        let alertController = UIAlertController(title: Texts.Alert.title,
-                                                message: Texts.Alert.message,
+      let alertController = UIAlertController(title: L10n.errorAlertTitle,
+                                              message: L10n.errorAlertMessage,
                                                 preferredStyle: .alert)
-        let okAction = UIAlertAction(title: Texts.Alert.ok_button, style: .default)
+      let okAction = UIAlertAction(title: L10n.ok, style: .default)
         alertController.addAction(okAction)
         present(alertController, animated: true)
     }
