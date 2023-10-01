@@ -31,10 +31,12 @@
 		B427F0882A9F895300E91150 /* PasscodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0872A9F895300E91150 /* PasscodeManager.swift */; };
 		B427F08B2AA04FDA00E91150 /* PasscodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F08A2AA04FDA00E91150 /* PasscodeRouter.swift */; };
 		B427F08F2AA0511100E91150 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F08E2AA0511100E91150 /* SecondViewController.swift */; };
-		B427F0952AA0631600E91150 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B427F0942AA0631600E91150 /* Localizable.strings */; };
-		B427F0972AA0651800E91150 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0962AA0651800E91150 /* Texts.swift */; };
 		B427F09F2AA0683800E91150 /* PasscodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F09E2AA0683800E91150 /* PasscodeViewModelTests.swift */; };
 		B427F0A62AA06B2E00E91150 /* MockPasscodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0A52AA06B2E00E91150 /* MockPasscodeManager.swift */; };
+		B44A58362AC9984E00186316 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = B44A58352AC9984E00186316 /* swiftgen.yml */; };
+		B44A583A2AC99B2C00186316 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A58392AC99B2C00186316 /* XCAssets+Generated.swift */; };
+		B44A583B2AC99E2F00186316 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B44A583D2AC99E2F00186316 /* Localizable.strings */; };
+		B44A583F2AC99E9E00186316 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A583E2AC99E9E00186316 /* Strings+Generated.swift */; };
 		B4EF5CA82AB84C7200BEBBF2 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF5CA72AB84C7200BEBBF2 /* DependencyContainer.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,11 +85,13 @@
 		B427F0872A9F895300E91150 /* PasscodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeManager.swift; sourceTree = "<group>"; };
 		B427F08A2AA04FDA00E91150 /* PasscodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeRouter.swift; sourceTree = "<group>"; };
 		B427F08E2AA0511100E91150 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		B427F0942AA0631600E91150 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		B427F0962AA0651800E91150 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		B427F09C2AA0683800E91150 /* PasscodeViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasscodeViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427F09E2AA0683800E91150 /* PasscodeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModelTests.swift; sourceTree = "<group>"; };
 		B427F0A52AA06B2E00E91150 /* MockPasscodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasscodeManager.swift; sourceTree = "<group>"; };
+		B44A58352AC9984E00186316 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
+		B44A58392AC99B2C00186316 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		B44A583C2AC99E2F00186316 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B44A583E2AC99E9E00186316 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		B4EF5CA72AB84C7200BEBBF2 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		DBC2FD08E8826FA179688C39 /* Pods-PasscodeView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.release.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.release.xcconfig"; sourceTree = "<group>"; };
 		DC1F2978C5383852E992CF39 /* Pods-PasscodeView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasscodeView.debug.xcconfig"; path = "Target Support Files/Pods-PasscodeView/Pods-PasscodeView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		B427F05A2A9F00F100E91150 /* PasscodeView */ = {
 			isa = PBXGroup;
 			children = (
+				B44A58352AC9984E00186316 /* swiftgen.yml */,
+				B44A58382AC99AA200186316 /* Generated */,
 				B427F05B2A9F00F100E91150 /* AppDelegate.swift */,
 				B427F05D2A9F00F100E91150 /* SceneDelegate.swift */,
 				B4EF5CA72AB84C7200BEBBF2 /* DependencyContainer.swift */,
@@ -292,8 +298,7 @@
 		B427F0922AA062E800E91150 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				B427F0942AA0631600E91150 /* Localizable.strings */,
-				B427F0962AA0651800E91150 /* Texts.swift */,
+				B44A583D2AC99E2F00186316 /* Localizable.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -318,6 +323,15 @@
 				B407EDCC2AA1D88200EC68F0 /* MockNavigationController.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B44A58382AC99AA200186316 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				B44A583E2AC99E9E00186316 /* Strings+Generated.swift */,
+				B44A58392AC99B2C00186316 /* XCAssets+Generated.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		D11C671C5F18DF2D2DB09124 /* Frameworks */ = {
@@ -354,6 +368,7 @@
 			buildConfigurationList = B427F06C2A9F00F400E91150 /* Build configuration list for PBXNativeTarget "PasscodeView" */;
 			buildPhases = (
 				996411D8B846635235C705B9 /* [CP] Check Pods Manifest.lock */,
+				B44A58372AC9990300186316 /* SwiftGen */,
 				B427F0542A9F00F100E91150 /* Sources */,
 				B427F0552A9F00F100E91150 /* Frameworks */,
 				B427F0562A9F00F100E91150 /* Resources */,
@@ -442,8 +457,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B427F0682A9F00F400E91150 /* LaunchScreen.storyboard in Resources */,
-				B427F0952AA0631600E91150 /* Localizable.strings in Resources */,
+				B44A583B2AC99E2F00186316 /* Localizable.strings in Resources */,
 				B427F0652A9F00F400E91150 /* Assets.xcassets in Resources */,
+				B44A58362AC9984E00186316 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +512,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B44A58372AC9990300186316 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -514,8 +548,8 @@
 			files = (
 				B427F0812A9F62CE00E91150 /* PasscodeViewModel.swift in Sources */,
 				B427F0882A9F895300E91150 /* PasscodeManager.swift in Sources */,
+				B44A583F2AC99E9E00186316 /* Strings+Generated.swift in Sources */,
 				B427F0702A9F095F00E91150 /* RootView.swift in Sources */,
-				B427F0972AA0651800E91150 /* Texts.swift in Sources */,
 				B427F0782A9F474E00E91150 /* UIStackView+Numeric.swift in Sources */,
 				B427F08F2AA0511100E91150 /* SecondViewController.swift in Sources */,
 				B4EF5CA82AB84C7200BEBBF2 /* DependencyContainer.swift in Sources */,
@@ -527,6 +561,7 @@
 				B427F0762A9F391900E91150 /* RoundedButton.swift in Sources */,
 				B427F0722A9F13F600E91150 /* UIView+RoundView.swift in Sources */,
 				B427F0842A9F666A00E91150 /* PasscodeAssembler.swift in Sources */,
+				B44A583A2AC99B2C00186316 /* XCAssets+Generated.swift in Sources */,
 				B427F0742A9F1D2E00E91150 /* UIColor+AppColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +602,14 @@
 				B427F0672A9F00F400E91150 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B44A583D2AC99E2F00186316 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B44A583C2AC99E2F00186316 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
