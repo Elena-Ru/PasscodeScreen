@@ -17,4 +17,5 @@ Passcode screen has:
 11. SwiftLint.
 12. UI develop with Snapkit.
 13. Unit tests.
-14. UI tests.   
+14. UI tests.
+15. Fastlane.  
