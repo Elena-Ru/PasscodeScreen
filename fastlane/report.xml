@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000485">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: clear_derived_data" time="0.516346">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: xcclean" time="1.419258">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: cocoapods" time="1.338443">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4:   if [[ -f &quot;./Pods/SwiftGen/bin/swiftgen&quot; ]]; then
+    &quot;./Pods/SwiftGen/bin/swiftgen&quot;
+  else
+    echo &quot;warning: SwiftGen is not installed. Run &apos;pod install --repo-update&apos; to install it.&quot;
+  fi
+" time="0.007945">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

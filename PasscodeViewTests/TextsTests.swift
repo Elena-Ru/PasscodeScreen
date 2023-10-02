@@ -8,25 +8,25 @@
 import XCTest
 @testable import PasscodeView
 
-class TextsTests: XCTestCase {
+final class TextsTests: XCTestCase {
 
     func test_ViewControllerTitle() {
         let expectedText = NSLocalizedString("passcode_title", comment: "")
-        XCTAssertEqual(Texts.ViewController.title, expectedText)
+        XCTAssertEqual(L10n.passcodeTitle, expectedText)
     }
     
     func test_AlertTitle() {
         let expectedText = NSLocalizedString("error_alert_title", comment: "")
-        XCTAssertEqual(Texts.Alert.title, expectedText)
+        XCTAssertEqual(L10n.errorAlertTitle, expectedText)
     }
     
     func test_AlertMessage() {
         let expectedText = NSLocalizedString("error_alert_message", comment: "")
-        XCTAssertEqual(Texts.Alert.message, expectedText)
+        XCTAssertEqual(L10n.errorAlertMessage, expectedText)
     }
     
     func test_AlertOkButton() {
         let expectedText = NSLocalizedString("ok", comment: "")
-        XCTAssertEqual(Texts.Alert.ok_button, expectedText)
+        XCTAssertEqual(L10n.ok, expectedText)
     }
 }
