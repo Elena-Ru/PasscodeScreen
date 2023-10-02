@@ -27,4 +27,3 @@ class PasscodeManagerTests: XCTestCase {
         XCTAssertFalse(passcodeManager.validate(passcode: "1234"), "Function should return false for incorrect passcode")
     }
 }
-

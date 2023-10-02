@@ -23,4 +23,3 @@ class PasscodeRouter: PasscodeRouting {
         navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
-
