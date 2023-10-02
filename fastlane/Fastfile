@@ -1,0 +1,49 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :custom_lane do
+    # add actions here: https://docs.fastlane.tools/actions
+# clear data
+clear_derived_data
+xcclean(
+scheme: "PasscodeView",
+workspace: "PasscodeView.xcworkspace"
+)
+
+# update a dependencies
+cocoapods(
+use_bundle_exec: false
+)
+
+# run tests
+ run_tests
+
+#swiftgen
+  pod_path = "./Pods" # Относительный путь от корня вашего проекта до директории Pods
+
+sh <<-SCRIPT
+  if [[ -f "#{pod_path}/SwiftGen/bin/swiftgen" ]]; then
+    "#{pod_path}/SwiftGen/bin/swiftgen"
+  else
+    echo "warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it."
+  fi
+SCRIPT
+  end
+
+end
