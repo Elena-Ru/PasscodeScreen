@@ -13,7 +13,8 @@ Passcode screen has:
 7.  Combine.
 8.  Swinject.
 9.  Localization.
-10. SwiftGen
-11. UI develop with Snapkit.
-12. Unit tests.
-13. UI tests.   
+10. SwiftGen.
+11. SwiftLint.
+12. UI develop with Snapkit.
+13. Unit tests.
+14. UI tests.   
