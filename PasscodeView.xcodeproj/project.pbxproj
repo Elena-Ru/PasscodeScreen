@@ -373,6 +373,7 @@
 				B427F0552A9F00F100E91150 /* Frameworks */,
 				B427F0562A9F00F100E91150 /* Resources */,
 				4E784225DE9EBBA4A88A8668 /* [CP] Embed Pods Frameworks */,
+				B44A58402ACAA55F00186316 /* SwiftLInt */,
 			);
 			buildRules = (
 			);
@@ -529,6 +530,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n\n";
+		};
+		B44A58402ACAA55F00186316 /* SwiftLInt */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLInt;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

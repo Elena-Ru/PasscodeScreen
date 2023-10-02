@@ -30,4 +30,3 @@ class TextsTests: XCTestCase {
         XCTAssertEqual(Texts.Alert.ok_button, expectedText)
     }
 }
-

@@ -54,25 +54,25 @@ final class PasscodeViewUITests: XCTestCase {
     }
 
     func testPasscodeViewController_WhenInvalidPasscode_PresentsAlertDialog() throws {
-        //Given
+        // Given
         let fisrtButton = app.buttons["1"]
         let secondButton = app.buttons["2"]
-        //When
+        // When
         fisrtButton.tap()
         secondButton.tap()
         secondButton.tap()
         secondButton.tap()
-        //Then
-        XCTAssertTrue(app.alerts["Error"].waitForExistence(timeout: 1), "An Error Alert dialog was not   presented when invalid passcode was entered")
+        // Then
+        XCTAssertTrue(app.alerts["Error"].waitForExistence(timeout: 1), "An Error Alert dialog was not presented when invalid passcode was entered")
     }
   
     func testPasscodeViewController_UIChangesWhenEnteringPasscode() throws {
-        //Given
+        // Given
         let firstCircle = app.otherElements["circle0"]
         let fisrtButton = app.buttons["1"]
-        //When
+        // When
         fisrtButton.tap()
-        //Then
+        // Then
         XCTAssertEqual(firstCircle.value as? String, "filled", "First circle did not change to filled after entering a digit")
     }
   
@@ -85,7 +85,7 @@ final class PasscodeViewUITests: XCTestCase {
         fisrtButton.tap()
         backspaceButton.tap()
         // Then
-        XCTAssertEqual(firstCircle.value as? String, "empty", "Backspace did not clear the entered   digit")
+        XCTAssertEqual(firstCircle.value as? String, "empty", "Backspace did not clear the entered digit")
     }
   
     func testPasscodeViewController_SuccessfulPinEntryNavigatesToSecondScreen() throws {
@@ -117,20 +117,20 @@ final class PasscodeViewUITests: XCTestCase {
         secondButton.tap()
         thirdButton.tap()
         // Then
-        XCTAssertEqual(firstCircle.value as? String, "filled", "First circle did not fill after   entering a digit")
-        XCTAssertEqual(secondCircle.value as? String, "filled", "Second circle did not fill after   entering a digit")
-        XCTAssertEqual(thirdCircle.value as? String, "filled", "Third circle did not fill after   entering a digit")
+        XCTAssertEqual(firstCircle.value as? String, "filled", "First circle did not fill after entering a digit")
+        XCTAssertEqual(secondCircle.value as? String, "filled", "Second circle did not fill after entering a digit")
+        XCTAssertEqual(thirdCircle.value as? String, "filled", "Third circle did not fill after entering a digit")
         // When
         backspaceButton.tap()
         backspaceButton.tap()
         // Then
-        XCTAssertEqual(firstCircle.value as? String, "filled", "First circle should remain filled   after deleting two digits")
-        XCTAssertEqual(secondCircle.value as? String, "empty", "Second circle did not clear after   deleting a digit")
-        XCTAssertEqual(thirdCircle.value as? String, "empty", "Third circle did not clear after   deleting a digit")
+        XCTAssertEqual(firstCircle.value as? String, "filled", "First circle should remain filled after deleting two digits")
+        XCTAssertEqual(secondCircle.value as? String, "empty", "Second circle did not clear after deleting a digit")
+        XCTAssertEqual(thirdCircle.value as? String, "empty", "Third circle did not clear after deleting a digit")
         // When
         backspaceButton.tap()
         // Then
-        XCTAssertEqual(firstCircle.value as? String, "empty", "First circle did not clear after   deleting the last digit")
+        XCTAssertEqual(firstCircle.value as? String, "empty", "First circle did not clear after deleting the last digit")
     }
   
   func testPasscodeViewController_ClearsPinAfterInvalidEntry() throws {

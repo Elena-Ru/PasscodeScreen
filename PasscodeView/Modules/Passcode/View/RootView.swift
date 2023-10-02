@@ -23,7 +23,7 @@ class RootView: UIView {
     let rightNumericTitles = ["3", "6", "9"]
     var circles: [UIView] = []
     var numericButtons: [UIButton] = []
-    //MARK: - Views
+    // MARK: - Views
     
     let enterPasswordLabel: UILabel = {
         let label = UILabel()
@@ -47,7 +47,7 @@ class RootView: UIView {
     let numericLeftStackView: UIStackView = .createNumericStackView()
     let numericRightStackView: UIStackView = .createNumericStackView()
   
-    let deleteButton: UIButton = {
+    lazy var deleteButton: UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(systemName: "delete.left.fill"), for: .normal)
         btn.tintColor = .white
@@ -60,7 +60,7 @@ class RootView: UIView {
         return btn
     }()
     
-    //MARK: - Inits
+    // MARK: - Inits
     init() {
         super.init(frame: CGRect())
         createCircles(count: 4)
@@ -72,7 +72,7 @@ class RootView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Private methods
+    // MARK: - Private methods
     private func createCircles(count: Int) {
         for i in 0..<count {
             let circle = createCircle()
@@ -159,7 +159,7 @@ class RootView: UIView {
         }
     }
   
-    //MARK: - Objc methods
+    // MARK: - Objc methods
     @objc private func numericButtonTapped(_ sender: UIButton) {
          guard let buttonTitle = sender.titleLabel?.text else { return }
          numericButtonPublisher.send(buttonTitle)

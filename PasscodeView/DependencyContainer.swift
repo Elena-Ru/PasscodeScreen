@@ -25,7 +25,7 @@ class AppDependencyContainer {
             return PasscodeViewModel(passcodeManager: passcodeManager)
         }
       
-        container.register(PasscodeRouting.self) { (r, navigationController: UINavigationController) in
+        container.register(PasscodeRouting.self) { (_, navigationController: UINavigationController) in
             PasscodeRouter(navigationController: navigationController)
         }
     }

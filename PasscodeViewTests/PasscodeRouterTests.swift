@@ -24,14 +24,14 @@ final class PasscodeRouterTests: XCTestCase {
     }
 
     func test_initializationWithNavController() {
-        //Then
+        // Then
         XCTAssertNotNil(router.navigationController, "After initialization, the router's navigationController should not be nil.")
     }
 
     func test_navigateToNextScreen() {
-        //When
+        // When
         router.navigateToNextScreen()
-        //Then
+        // Then
         XCTAssertTrue(mockNavController.didPushViewController, "After calling navigateToNextScreen, the pushViewController method should be invoked.")
         XCTAssertTrue(mockNavController.pushedViewController is SecondViewController, "The passed controller should be an instance of SecondViewController.")
     }
