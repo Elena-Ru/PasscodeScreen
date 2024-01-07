@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  PasscodeView
+
+  Created by Елена Русских on 2023-08-31.
+  
+*/
+"ok" = "OK";
+"error_alert_title" = "Error";
+"error_alert_message" = "Invalid password";
+
+"passcode_title" = "Enter Password";
