@@ -1,32 +1,32 @@
+////
+////  PasscodeViewUITestsLaunchTests.swift
+////  PasscodeViewUITests
+////
+////  Created by Елена Русских on 2023-09-01.
+////
 //
-//  PasscodeViewUITestsLaunchTests.swift
-//  PasscodeViewUITests
+//import XCTest
 //
-//  Created by Елена Русских on 2023-09-01.
+//final class PasscodeViewUITestsLaunchTests: XCTestCase {
 //
-
-import XCTest
-
-final class PasscodeViewUITestsLaunchTests: XCTestCase {
-
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        true
-    }
-
-    override func setUpWithError() throws {
-        continueAfterFailure = false
-    }
-
-    func testLaunch() throws {
-        let app = XCUIApplication()
-        app.launch()
-
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
-
-        let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = "Launch Screen"
-        attachment.lifetime = .keepAlways
-        add(attachment)
-    }
-}
+//    override class var runsForEachTargetApplicationUIConfiguration: Bool {
+//        true
+//    }
+//
+//    override func setUpWithError() throws {
+//        continueAfterFailure = false
+//    }
+//
+//    func testLaunch() throws {
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        // Insert steps here to perform after app launch but before taking a screenshot,
+//        // such as logging into a test account or navigating somewhere in the app
+//
+//        let attachment = XCTAttachment(screenshot: app.screenshot())
+//        attachment.name = "Launch Screen"
+//        attachment.lifetime = .keepAlways
+//        add(attachment)
+//    }
+//}

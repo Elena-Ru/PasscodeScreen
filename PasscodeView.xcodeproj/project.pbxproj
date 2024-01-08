@@ -33,6 +33,8 @@
 		B427F08F2AA0511100E91150 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F08E2AA0511100E91150 /* SecondViewController.swift */; };
 		B427F09F2AA0683800E91150 /* PasscodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F09E2AA0683800E91150 /* PasscodeViewModelTests.swift */; };
 		B427F0A62AA06B2E00E91150 /* MockPasscodeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B427F0A52AA06B2E00E91150 /* MockPasscodeManager.swift */; };
+		B4368DCC2B4B77C3003F2C8D /* PasscodeRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4368DCB2B4B77C3003F2C8D /* PasscodeRouting.swift */; };
+		B4368DD42B4B7E36003F2C8D /* PasscodeManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4368DD32B4B7E36003F2C8D /* PasscodeManagerProtocol.swift */; };
 		B44A58362AC9984E00186316 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = B44A58352AC9984E00186316 /* swiftgen.yml */; };
 		B44A583A2AC99B2C00186316 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A58392AC99B2C00186316 /* XCAssets+Generated.swift */; };
 		B44A583B2AC99E2F00186316 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B44A583D2AC99E2F00186316 /* Localizable.strings */; };
@@ -88,6 +90,8 @@
 		B427F09C2AA0683800E91150 /* PasscodeViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasscodeViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B427F09E2AA0683800E91150 /* PasscodeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewModelTests.swift; sourceTree = "<group>"; };
 		B427F0A52AA06B2E00E91150 /* MockPasscodeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasscodeManager.swift; sourceTree = "<group>"; };
+		B4368DCB2B4B77C3003F2C8D /* PasscodeRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeRouting.swift; sourceTree = "<group>"; };
+		B4368DD32B4B7E36003F2C8D /* PasscodeManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeManagerProtocol.swift; sourceTree = "<group>"; };
 		B44A58352AC9984E00186316 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		B44A58392AC99B2C00186316 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		B44A583C2AC99E2F00186316 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -176,9 +180,8 @@
 				B427F08C2AA050DC00E91150 /* Modules */,
 				B427F07E2A9F628200E91150 /* Helpers */,
 				B427F07D2A9F627000E91150 /* Extensions */,
-				B427F0642A9F00F400E91150 /* Assets.xcassets */,
-				B427F0662A9F00F400E91150 /* LaunchScreen.storyboard */,
 				B427F0692A9F00F400E91150 /* Info.plist */,
+				B4368DC72B4B7350003F2C8D /* SupportingFiles */,
 			);
 			path = PasscodeView;
 			sourceTree = "<group>";
@@ -249,7 +252,8 @@
 		B427F0862A9F893200E91150 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				B427F0872A9F895300E91150 /* PasscodeManager.swift */,
+				B4368DD22B4B7E21003F2C8D /* Impl */,
+				B4368DD12B4B7E1B003F2C8D /* API */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -257,7 +261,8 @@
 		B427F0892AA04FBF00E91150 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				B427F08A2AA04FDA00E91150 /* PasscodeRouter.swift */,
+				B4368DC92B4B77A3003F2C8D /* Impl */,
+				B4368DC82B4B779B003F2C8D /* API */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -323,6 +328,47 @@
 				B407EDCC2AA1D88200EC68F0 /* MockNavigationController.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B4368DC72B4B7350003F2C8D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B427F0642A9F00F400E91150 /* Assets.xcassets */,
+				B427F0662A9F00F400E91150 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B4368DC82B4B779B003F2C8D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B4368DCB2B4B77C3003F2C8D /* PasscodeRouting.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B4368DC92B4B77A3003F2C8D /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				B427F08A2AA04FDA00E91150 /* PasscodeRouter.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		B4368DD12B4B7E1B003F2C8D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B4368DD32B4B7E36003F2C8D /* PasscodeManagerProtocol.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B4368DD22B4B7E21003F2C8D /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				B427F0872A9F895300E91150 /* PasscodeManager.swift */,
+			);
+			path = Impl;
 			sourceTree = "<group>";
 		};
 		B44A58382AC99AA200186316 /* Generated */ = {
@@ -565,6 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4368DCC2B4B77C3003F2C8D /* PasscodeRouting.swift in Sources */,
 				B427F0812A9F62CE00E91150 /* PasscodeViewModel.swift in Sources */,
 				B427F0882A9F895300E91150 /* PasscodeManager.swift in Sources */,
 				B44A583F2AC99E9E00186316 /* Strings+Generated.swift in Sources */,
@@ -582,6 +629,7 @@
 				B427F0842A9F666A00E91150 /* PasscodeAssembler.swift in Sources */,
 				B44A583A2AC99B2C00186316 /* XCAssets+Generated.swift in Sources */,
 				B427F0742A9F1D2E00E91150 /* UIColor+AppColors.swift in Sources */,
+				B4368DD42B4B7E36003F2C8D /* PasscodeManagerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,8 +686,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 26;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.PasscodeViewUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,8 +703,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 26;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.PasscodeViewUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -787,13 +837,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 26;
+				DEVELOPMENT_TEAM = AD4W7X6593;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasscodeView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -801,9 +852,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.PasscodeView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -814,13 +869,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 26;
+				DEVELOPMENT_TEAM = AD4W7X6593;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PasscodeView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -828,9 +884,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.PasscodeView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -839,8 +899,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 26;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				"OTHER_SWIFT_FLAGS[arch=*]" = "-D TEST";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.PasscodeViewTests";
@@ -857,8 +918,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 26;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.PasscodeViewTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

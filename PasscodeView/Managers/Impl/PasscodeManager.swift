@@ -5,21 +5,21 @@
 //  Created by Елена Русских on 2023-08-30.
 //
 
-import Foundation
 import KeychainSwift
 
-protocol PasscodeManagerProtocol {
-    func save(passcode: String) -> Bool
-    func validate(passcode: String) -> Bool
-}
-
-final class PasscodeManager: PasscodeManagerProtocol {
+// MARK: - PasscodeManager
+final class PasscodeManager {
+    // MARK: Properties
     static let shared = PasscodeManager()
-    private init() {}
-    
     private let keychain = KeychainSwift()
     private let keychainKey = "storedPasscode"
     
+    // MARK: Initializer
+    private init() {}
+}
+
+// MARK: - PasscodeManagerProtocol
+extension PasscodeManager: PasscodeManagerProtocol {
     func save(passcode: String) -> Bool {
         return keychain.set(passcode, forKey: keychainKey)
     }

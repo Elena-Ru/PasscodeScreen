@@ -7,9 +7,13 @@
 
 import Swinject
 
-class AppDependencyContainer {
+// MARK: - AppDependencyContainer
+final class AppDependencyContainer {
+    
+    // MARK: Properties
     let container: Container
 
+    // MARK: Initializer
     init() {
         container = Container()
         registerDependencies()

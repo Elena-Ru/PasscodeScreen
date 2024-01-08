@@ -5,14 +5,15 @@
 //  Created by Елена Русских on 2023-08-30.
 //
 
-import Foundation
 import UIKit
 
+// MARK: - PasscodeAssembler
 protocol PasscodeAssembler {
     func assemblePasscodeStack() -> UINavigationController
 }
 
-class PasscodeAssemblerImpl: PasscodeAssembler {
+// MARK: - PasscodeAssemblerImpl
+final class PasscodeAssemblerImpl: PasscodeAssembler {
     func assemblePasscodeStack() -> UINavigationController {
         let container = AppDependencyContainer().container
         
