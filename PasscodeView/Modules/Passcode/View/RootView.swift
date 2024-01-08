@@ -9,22 +9,19 @@ import UIKit
 import SnapKit
 import Combine
 
-class RootView: UIView {
+// MARK: - RootView
+final class RootView: UIView {
   
-    struct LayoutConstants {
-        static let circleSize: CGFloat = 20
-        static let numericButtonSize: CGFloat = 60
-    }
-  
+    // MARK: Properties
     let numericButtonPublisher = PassthroughSubject<String, Never>()
     let deleteButtonPublisher = PassthroughSubject<Void, Never>()
-    let centralNumericTitles = ["2", "5", "8", "0"]
-    let leftNumericTitles = ["1", "4", "7"]
-    let rightNumericTitles = ["3", "6", "9"]
+    let centralNumericTitles = Constants.centralNumericTitles
+    let leftNumericTitles = Constants.leftNumericTitles
+    let rightNumericTitles = Constants.rightNumericTitles
     var circles: [UIView] = []
     var numericButtons: [UIButton] = []
-    // MARK: - Views
     
+    // MARK: Views
     let enterPasswordLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -39,7 +36,7 @@ class RootView: UIView {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.distribution = .equalSpacing
-        stack.spacing = LayoutConstants.circleSize
+        stack.spacing = Constants.circleSize
         return stack
     }()
   
@@ -60,10 +57,10 @@ class RootView: UIView {
         return btn
     }()
     
-    // MARK: - Inits
+    // MARK: Initializer
     init() {
         super.init(frame: CGRect())
-        createCircles(count: 4)
+        createCircles(count: Constants.passcodeDigitCount)
         createNumericButtons()
         setupLayout()
     }
@@ -76,13 +73,13 @@ class RootView: UIView {
     private func createCircles(count: Int) {
         for i in 0..<count {
             let circle = createCircle()
-          circle.accessibilityIdentifier = "circle\(i)"
+            circle.accessibilityIdentifier = "circle\(i)"
             circles.append(circle)
             stackView.addArrangedSubview(circle)
             circle.snp.makeConstraints { make in
-              make.width.height.equalTo(LayoutConstants.circleSize)
+              make.width.height.equalTo(Constants.circleSize)
             }
-            circle.makeRounded(borderColor: .lightGrayBorder, borderWidth: 2)
+            circle.makeRounded(borderColor: .lightGrayBorder, borderWidth: Constants.borderWidth)
         }
     }
     
@@ -106,66 +103,90 @@ class RootView: UIView {
              stackView.addArrangedSubview(button)
              button.addTarget(self, action: #selector(numericButtonTapped(_:)), for: .touchUpInside)
              button.snp.makeConstraints { make in
-                 make.width.height.equalTo(LayoutConstants.numericButtonSize)
+                 make.width.height.equalTo(Constants.numericButtonSize)
              }
          }
      }
   
     private func setupLayout() {
-        addSubview(enterPasswordLabel)
-        addSubview(stackView)
-        addSubview(numericCentralStackView)
-        addSubview(numericLeftStackView)
-        addSubview(numericRightStackView)
-        addSubview(deleteButton)
+        [
+            enterPasswordLabel,
+            stackView,
+            numericCentralStackView,
+            numericLeftStackView,
+            numericRightStackView,
+            deleteButton
+        ].forEach { addSubview($0) }
       
         enterPasswordLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(30)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(Constants.enterPasswordLabelTopOffset)
             make.centerX.equalTo(self)
         }
         
         stackView.snp.makeConstraints { make in
-            make.width.equalTo(180)
-            make.height.equalTo(LayoutConstants.circleSize)
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(100)
+            make.width.equalTo(Constants.stackViewWidth)
+            make.height.equalTo(Constants.circleSize)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(Constants.stackViewTopOffset)
             make.centerX.equalTo(self)
         }
       
         numericCentralStackView.snp.makeConstraints { make in
-            make.width.equalTo(LayoutConstants.numericButtonSize)
-            make.height.equalTo(290)
-            make.top.equalTo(stackView.snp.bottom).offset(250)
+            make.width.equalTo(Constants.numericButtonSize)
+            make.height.equalTo(Constants.extendedVStackHeight)
+            make.top.equalTo(stackView.snp.bottom).offset(Constants.topOffset)
             make.centerX.equalTo(self)
         }
       
         numericLeftStackView.snp.makeConstraints { make in
-            make.width.equalTo(LayoutConstants.numericButtonSize)
-            make.height.equalTo(210)
-            make.top.equalTo(stackView.snp.bottom).offset(250)
-            make.centerX.equalTo(numericCentralStackView.snp.leading).offset(-LayoutConstants.numericButtonSize)
+            make.width.equalTo(Constants.numericButtonSize)
+            make.height.equalTo(Constants.regularVStackHeight)
+            make.top.equalTo(stackView.snp.bottom).offset(Constants.topOffset)
+            make.centerX.equalTo(numericCentralStackView.snp.leading).offset(-Constants.numericButtonSize)
         }
       
         numericRightStackView.snp.makeConstraints { make in
-            make.width.equalTo(LayoutConstants.numericButtonSize)
-            make.height.equalTo(210)
-            make.top.equalTo(stackView.snp.bottom).offset(250)
-            make.centerX.equalTo(numericCentralStackView.snp.trailing).offset(LayoutConstants.numericButtonSize)
+            make.width.equalTo(Constants.numericButtonSize)
+            make.height.equalTo(Constants.regularVStackHeight)
+            make.top.equalTo(stackView.snp.bottom).offset(Constants.topOffset)
+            make.centerX.equalTo(numericCentralStackView.snp.trailing).offset(Constants.numericButtonSize)
         }
       
         deleteButton.snp.makeConstraints { make in
-            make.height.width.equalTo(LayoutConstants.numericButtonSize)
-            make.top.equalTo(numericRightStackView.snp.bottom).offset(20)
-            make.centerX.equalTo(numericCentralStackView.snp.trailing).offset(LayoutConstants.numericButtonSize)
+            make.height.width.equalTo(Constants.numericButtonSize)
+            make.top.equalTo(numericRightStackView.snp.bottom).offset(Constants.deleteBtntopOffset)
+            make.centerX.equalTo(numericCentralStackView.snp.trailing).offset(Constants.numericButtonSize)
         }
     }
   
     // MARK: - Objc methods
-    @objc private func numericButtonTapped(_ sender: UIButton) {
+    @objc 
+    private func numericButtonTapped(_ sender: UIButton) {
          guard let buttonTitle = sender.titleLabel?.text else { return }
          numericButtonPublisher.send(buttonTitle)
     }
 
-    @objc private func deleteButtonAction(_ sender: UIButton) {
+    @objc 
+    private func deleteButtonAction(_ sender: UIButton) {
          deleteButtonPublisher.send(())
+    }
+}
+
+// MARK: - Constants
+private extension RootView {
+    enum Constants {
+        static let circleSize: CGFloat = 20
+        static let numericButtonSize: CGFloat = 60
+        static let passcodeDigitCount: Int = 4
+        static let regularVStackHeight: CGFloat = 210
+        static let extendedVStackHeight: CGFloat = 290
+        static let topOffset: CGFloat = 250
+        static let deleteBtntopOffset: CGFloat = 20
+        static let stackViewTopOffset: CGFloat = 100
+        static let stackViewWidth: CGFloat = 180
+        static let enterPasswordLabelTopOffset: CGFloat = 30
+        static let borderWidth: CGFloat = 2
+        static let centralNumericTitles: [String] = ["2", "5", "8", "0"]
+        static let leftNumericTitles: [String] = ["1", "4", "7"]
+        static let rightNumericTitles: [String] = ["3", "6", "9"]
     }
 }
